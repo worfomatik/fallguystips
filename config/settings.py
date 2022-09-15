@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'fallguys.apps.FallguysConfig',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,13 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 CSRF_COOKIE_NAME = "csrftoken"
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': [  # remove
+    #     'rest_framework.permissions.AllowAny'
+    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (  # added
+        'knox.auth.TokenAuthentication',
+    ),
+    'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S",
+}
