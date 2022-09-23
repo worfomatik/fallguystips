@@ -1,0 +1,17 @@
+
+# Send Request
+# Send Request
+GET http://127.0.0.1:8000/api/auth/user
+Authorization: Token 5b1f9c3e7b5c13d24b0d12076f36a63553daf60fb5006ea845ee8a5fa15ac937
+
+###
+POST http://127.0.0.1:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "DitchwaterSal",
+    "email": "dw@example.com",
+    "password": "1234"
+}
+
+5b1f9c3e7b5c13d24b0d12076f36a63553daf60fb5006ea845ee8a5fa15ac937
